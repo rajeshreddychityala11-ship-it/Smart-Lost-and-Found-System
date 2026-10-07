@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: smart-lost-found-api
+    runtime: docker
+    rootDir: backend
+    plan: free
+    envVars:
+      - key: DB_URL
+        fromDatabase:
+          name: smart-lost-found-db
+          property: connectionString
+
+databases:
+  - name: smart-lost-found-db
+    plan: free
