@@ -5,10 +5,26 @@ services:
     rootDir: backend
     plan: free
     envVars:
-      - key: DB_URL
+      - key: DB_HOST
         fromDatabase:
           name: smart-lost-found-db
-          property: connectionString
+          property: host
+      - key: DB_PORT
+        fromDatabase:
+          name: smart-lost-found-db
+          property: port
+      - key: DB_NAME
+        fromDatabase:
+          name: smart-lost-found-db
+          property: database
+      - key: DB_USERNAME
+        fromDatabase:
+          name: smart-lost-found-db
+          property: user
+      - key: DB_PASSWORD
+        fromDatabase:
+          name: smart-lost-found-db
+          property: password
 
 databases:
   - name: smart-lost-found-db
