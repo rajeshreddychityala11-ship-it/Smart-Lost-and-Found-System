@@ -1,1 +1,1 @@
-const API = localStorage.getItem("apiBase") || "http://localhost:8080/api";
+const API = localStorage.getItem("apiBase") || "https://smart-lost-found-api.onrender.com/api";
